@@ -1,0 +1,12 @@
+body {
+    background-image: url("../images/background.jpg");
+    z-index: 0;
+}
+
+#header {
+    color: #d3d3d3;
+}
+
+div {
+    background-color: black;
+}
