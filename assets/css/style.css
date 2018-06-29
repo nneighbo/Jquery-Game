@@ -10,3 +10,38 @@ body {
 div {
     background-color: black;
 }
+
+.stats-text {
+    text-align: center;
+    color: white;
+}
+
+.vs-text {
+    text-align: center;
+    color: black;
+    margin-bottom: 0px;
+}
+
+.top-text {
+    margin-bottom: 0px;
+}
+
+.attack {
+    position: relative;
+    left: 120px;
+    top: 55px;
+}
+
+.hero-span {
+    text-align: center;
+    color: white;   
+}
+
+.sith-span {
+    text-align: center;
+    color: white;   
+}
+
+.sith-attack {
+    opacity: 0;
+}
