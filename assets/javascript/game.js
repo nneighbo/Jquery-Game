@@ -35,43 +35,43 @@ var vader = {
 
 $(document).ready(function () {
 
-    $(".attack").css('visibility','hidden'); 
+    
+    $(".luke-hp").append(luke.health);
+    $(".luke-damage").append(luke.damage);
+
+    $(".obi-hp").append(obi.health);
+    $(".obi-damage").append(obi.damage);
+
+    $(".yoda-hp").append(yoda.health);
+    $(".yoda-damage").append(yoda.damage);
+
+    $(".darth-hp").append(darth.health);
+    $(".darth-damage").append(darth.damage);
+
+    $(".vader-hp").append(vader.health);
+    $(".vader-damage").append(vader.damage);
+
+    $(".general-hp").append(general.health);
+    $(".general-damage").append(general.damage);
+    $(".attack").css('visibility', 'hidden');
 
     $(".pick-hero").on("click", function (e) {
-    if (window.hero === true) {
-        return
-    }   
-    window.hero = true;
-    $(".hero-span").append($(this));
-    console.log(this);
-});
+        if (window.hero === true) {
+            return
 
-$(".pick-sith").on("click", function (e) {
-    if (window.with === true) {
-        return
-    }
-    window.with = true;
-        $(".attack").css('visibility','visible');
-        $(".sith-span").append($(this));
+        }
+        window.hero = true;
+        $(".hero-span").append($(this));
     });
 
-// function attack() {
-//     hero.health - sith.heath;
-//     if (hero.health == 0) {
-//         //game over, reset game
-//         resetGame();
-//     } 
-//     else if (hero.health > sith.health){
-//         //encouage another attach
-        
-//     }
-// }
-
-   var attack = function(e) {
-       if (yoda.health > 1 $$ vader.health > 1) {
-
-       };
-   };
+    $(".pick-sith").on("click", function (e) {
+        if (window.with === true) {
+            return
+        }
+        window.with = true;
+        $(".attack").css('visibility', 'visible');
+        $(".sith-span").append($(this));
+    });
 });
 
 
