@@ -72,6 +72,11 @@ $(document).ready(function () {
         $(".attack").css('visibility', 'visible');
         $(".sith-span").append($(this));
     });
+
+    $(".attack").on("click", function(){
+        darth.health = darth.health - yoda.damage
+        $(".darth-hp").html('Health: ' + darth.health);
+    });
 });
 
 
