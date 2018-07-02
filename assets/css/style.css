@@ -28,7 +28,7 @@ div {
 
 .attack {
     position: relative;
-    left: 120px;
+    left: 225px;
     top: 55px;
 }
 
@@ -37,11 +37,39 @@ div {
     color: white;   
 }
 
+.hero-span .pick-hero {
+  position: relative;
+  top: -25px;
+  left: 50px;
+}
+
+.hero-span .pick-hero p {
+    position: relative;
+    top: 0px;
+    left: -185px;
+  }
+
 .sith-span {
     text-align: center;
     color: white;   
 }
 
+.sith-span .pick-sith {
+    position: relative;
+    top: 5px;
+    left: 250px;  
+}
+
+.sith-span .pick-sith p {
+    position: relative;
+    top: 0px;
+    left: -185px;
+  }
+
 .sith-attack {
     opacity: 0;
+}
+
+.defender {
+    margin-left: 150px;
 }

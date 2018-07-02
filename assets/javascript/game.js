@@ -1,5 +1,7 @@
-window.hero = false;
-window.sith = false;
+// window.hero = false;
+// window.sith = false;
+
+var heroName;
 
 var yoda = {
     health: 100,
@@ -35,7 +37,7 @@ var vader = {
 
 $(document).ready(function () {
 
-    
+
     $(".luke-hp").append(luke.health);
     $(".luke-damage").append(luke.damage);
 
@@ -58,7 +60,6 @@ $(document).ready(function () {
     $(".pick-hero").on("click", function (e) {
         if (window.hero === true) {
             return
-
         }
         window.hero = true;
         $(".hero-span").append($(this));
@@ -73,11 +74,67 @@ $(document).ready(function () {
         $(".sith-span").append($(this));
     });
 
-    $(".attack").on("click", function(){
-        darth.health = darth.health - yoda.damage
+    let renderStats = function () {
         $(".darth-hp").html('Health: ' + darth.health);
+        $(".vader-hp").html('Health: ' + vader.health);
+        $(".general-hp").html('Health: ' + general.health);
+        $(".yoda-hp").html('Health: ' + yoda.health);
+        $(".luke-hp").html('Health: ' + luke.health);
+        $(".obi-hp").html('Health: ' + obi.health);
+    }
+
+    $(".attack").on("click", function(){
+        heroName = $("span#hero.hero-span span.pick-hero input").val();
+        sithName = $("span#sith.sith-span span.pick-sith input").val();
+        eval(sithName).health = eval(sithName).health - eval(heroName).damage;
+        eval(heroName).health = eval(heroName).health - eval(sithName).damage;
+        if (eval(sithName).health >= -50 && eval(heroName).health >= 0){
+            renderStats();
+            eval(sithName).health
+            eval(heroName).health
+        if (eval(sithName).health <= 1) {
+            $(".sith-span").empty();
+            window.with = false;
+        }
+        if (eval(heroName).health <= 1){
+            $(".hero-span").empty();
+            window.hero = false;
+        }
+        } 
     });
 });
+
+    
+    // $(".attack").on("click", function (character) {
+    //     if (general.health > 1) {
+    //         general.health = general.health - yoda.damage
+    //         $(".general-hp").html('Health: ' + general.health);
+    //         if (general.health <= 0) {
+    //             $(".sith-span").empty();
+    //             $(".sith-span").append($(".darth"))
+    //         }
+
+    //     }
+    //     if (general.health <= 0 && darth.health > 1) {
+    //         darth.health = darth.health - yoda.damage
+    //         $(".darth-hp").html('Health: ' + darth.health)
+    //         if (darth.health <= 0 ) {
+    //             $(".sith-span").empty();
+    //             $(".sith-span").append($(".vader"))
+    //         }
+    //     }
+    //     if (darth.health <= 0 && general.health <= 0 && vader.health > 1) {
+    //         vader.health = vader.health - yoda.damage
+    //         $(".vader-hp").html('Health: ' + vader.health)
+    //         if (vader.health <= 0 ) {
+    //             $(".sith-span").empty();
+    //             window.sith = false;
+    //         }
+    //     }
+
+    // });
+// });
+
 
 
 

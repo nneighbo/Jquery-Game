@@ -24,60 +24,66 @@
         <div class="col-lg-12">
             <span class="row justify-content-between">
                 <h1 id="header">CHOOSE YOUR JEDI</h1>
-                <h1 id="header">CHOOSE ENEMY</h1>
+          
             </span>
             <span class="row justify-content-between">
                 <span class="pick-hero">
                     <p class="luke-hp stats-text top-text">Health: </p>
                     <img id="luke-skywalker" src="./assets/images/luke_skywalker.jpg" alt="">
                     <p class="luke-damage stats-text">Attack: </p>
+                    <input name="hero-name" value="luke" size="10">
                 </span>
                 <span class="pick-hero">
                     <p class="obi-hp stats-text top-text">Health: </p>
                     <img id="obi-wan" src="./assets/images/obi_wan.jpg" alt="">
                     <p class="obi-damage stats-text">Attack: </p>
+                    <input name="hero-name" value="obi" size="10">
                 </span>
                 <span class="pick-hero">
                     <p class="yoda-hp stats-text top-text">Health: </p>
                     <img id="yoda" src="./assets/images/yoda.jpg" alt="">
                     <p class="yoda-damage stats-text">Attack: </p>
+                    <input name="hero-name" value="yoda" size="10">
                 </span>
                 <span>
                     <p class="vs-text">Health: </p>
                     <img id="vs" src="./assets/images/vs.jpg" alt="">
                     <p class="vs-text">Attack: </p>
                 </span>
-                <span class="pick-sith">
+                <span class="pick-sith darth">
                     <p class="darth-hp stats-text top-text">Health: </p>
                     <img id="darth-maul" src="./assets/images/darth_maul.jpg" alt="">
                     <p class="darth-damage stats-text">Attack: </p>
+                    <input name="sith-name" value="darth" size="10">
                 </span>
-                <span class="pick-sith">
+                <span class="pick-sith vader">
                     <p class="vader-hp stats-text top-text">Health: </p>
                     <img id="darth-vader" src="./assets/images/darth_vader.jpg" alt="">
                     <p class="vader-damage stats-text">Attack: </p>
+                    <input name="sith-name" value="vader" size="10">
                 </span>
-                <span class="pick-sith">
+                <span class="pick-sith general">
                     <p class="general-hp stats-text top-text">Health: </p>
                     <img id="general-grevious" src="./assets/images/general_grevious.jpg" alt="">
                     <p class="general-damage stats-text">Attack: </p>
+                    <input name="sith-name" value="general" size="10">
                 </span>
                     
             </span>
             <span class="row">
                 <div class="col-lg-6">
-                    <span class="row">
-                        <span class="hero-span">
-                            <h1 id="header">Your Character</h1>
+                    <span>
+                        <h1 id="header">Your Character</h1>
+                        <span id="hero" class="hero-span">
                             <button class="attack" type="button">Attack!</button>
                         </span>
                     </span>
                 </div>
                 <div class="col-lg-6">
-                    <span class="row">
-                        <span class="sith-span">
-                            <h1 id="header">Defending Character</h1>
-                            <button class="attack sith-attack" type="button">Attack!</button>
+                    <span>
+                    <h1 id="header" class="defender">Defending Character</h1>
+                        <span id="sith" class="sith-span">
+                          
                         </span>
                     </span>
                 </div>
