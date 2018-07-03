@@ -81,6 +81,10 @@ $(document).ready(function () {
         $(".luke-hp").html('Health: ' + luke.health);
         $(".obi-hp").html('Health: ' + obi.health);
     }
+
+    var resetGame = function () {
+        location.reload();
+    }
     
     $(".attack").on("click", function(){
         heroName = $("span#hero.hero-span span.pick-hero input").val();
@@ -107,6 +111,13 @@ $(document).ready(function () {
         }
         } 
     });
+        $(".reset").on("click", function(){
+            var userConfirm = confirm("Are you sure you want to reset?");
+            if (userConfirm === true) {
+                resetGame();
+            } else {
+            }
+        });
 });
 
     
