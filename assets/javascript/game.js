@@ -4,33 +4,33 @@
 var heroName;
 
 var yoda = {
-    health: 100,
-    damage: 50,
+    health: 300,
+    damage: 20,
 };
 
 var obi = {
-    health: 150,
+    health: 215,
     damage: 25,
 };
 
 var luke = {
-    health: 175,
+    health: 200,
     damage: 20,
 };
 
 var darth = {
-    health: 130,
-    damage: 15,
+    health: 170,
+    damage: 30,
 };
 
 var general = {
-    health: 120,
-    damage: 15,
+    health: 320,
+    damage: 10,
 };
 
 var vader = {
-    health: 200,
-    damage: 10,
+    health: 430,
+    damage: 15,
 };
 
 
@@ -55,7 +55,6 @@ $(document).ready(function () {
 
     $(".general-hp").append(general.health);
     $(".general-damage").append(general.damage);
-    $(".attack").css('visibility', 'hidden');
 
     $(".pick-hero").on("click", function (e) {
         if (window.hero === true) {
@@ -82,15 +81,21 @@ $(document).ready(function () {
         $(".luke-hp").html('Health: ' + luke.health);
         $(".obi-hp").html('Health: ' + obi.health);
     }
-
+    
     $(".attack").on("click", function(){
         heroName = $("span#hero.hero-span span.pick-hero input").val();
         sithName = $("span#sith.sith-span span.pick-sith input").val();
         eval(sithName).health = eval(sithName).health - eval(heroName).damage;
         eval(heroName).health = eval(heroName).health - eval(sithName).damage;
-        if (eval(sithName).health >= -50 && eval(heroName).health >= 0){
+
+        var heroDamage = function () {
+            $(".hero-text").html(heroName + " Did " + eval(heroName).damage + " Damage To " + sithName)
+            $(".sith-text").html(sithName + " Did " + eval(sithName).damage + " Damage To " + heroName)
+        };
+        if (eval(sithName).health >= -75 && eval(heroName).health >= -50){
             renderStats();
             eval(sithName).health
+            heroDamage();
             eval(heroName).health
         if (eval(sithName).health <= 1) {
             $(".sith-span").empty();

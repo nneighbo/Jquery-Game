@@ -45,7 +45,7 @@
                     <p class="yoda-damage stats-text">Attack: </p>
                     <input name="hero-name" value="yoda" size="10">
                 </span>
-                <span>
+                <span class="vs">
                     <p class="vs-text">Health: </p>
                     <img id="vs" src="./assets/images/vs.jpg" alt="">
                     <p class="vs-text">Attack: </p>
@@ -71,17 +71,26 @@
                     
             </span>
             <span class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-4">
                     <span>
-                        <h1 id="header">Your Character</h1>
+                        <h1 class="header">Your Character</h1>
+                        <button class="attack" type="button">Attack!</button>
                         <span id="hero" class="hero-span">
-                            <button class="attack" type="button">Attack!</button>
                         </span>
                     </span>
                 </div>
-                <div class="col-lg-6">
+                    <span class="col-lg-4">
+                        <span>
+                            <p class="hero-text"></p>
+                        </span>
+                        <span>
+                            <p class="sith-text"></p>
+                        </span>
+                    </span>
+                <div class="col-lg-4">
                     <span>
-                    <h1 id="header" class="defender">Defending Character</h1>
+                    <h1 class="header-sith" class="defender">Defending Character</h1>
+                    <button class="sith-attack" type="button">Attack!</button>
                         <span id="sith" class="sith-span">
                           
                         </span>

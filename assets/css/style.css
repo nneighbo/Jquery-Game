@@ -7,6 +7,17 @@ body {
     color: #d3d3d3;
 }
 
+.header {
+    color: #d3d3d3;
+    font-size: 20px;
+}
+
+.header-sith {
+    color: #d3d3d3;
+    font-size: 20px;
+    margin-left: 150px;
+}
+
 div {
     background-color: black;
 }
@@ -27,9 +38,10 @@ div {
 }
 
 .attack {
+    visibility: hidden;
     position: relative;
-    left: 225px;
-    top: 55px;
+    left: 155px;
+    top: 22px;
 }
 
 .hero-span {
@@ -37,17 +49,39 @@ div {
     color: white;   
 }
 
+.pick-hero {
+    margin-top: 30px;
+}
+
+.pick-sith {
+    margin-top: 30px;
+}
+
+.vs {
+    margin-top: 30px;
+}
+
+
 .hero-span .pick-hero {
   position: relative;
-  top: -25px;
-  left: 50px;
+  top: -30px;
+  left: 0px;
 }
 
 .hero-span .pick-hero p {
     position: relative;
     top: 0px;
-    left: -185px;
+    left: -95px;
   }
+
+.pick-hero input {
+    visibility: hidden;
+}
+
+.pick-sith input {
+    visibility: hidden;
+}
+
 
 .sith-span {
     text-align: center;
@@ -56,14 +90,14 @@ div {
 
 .sith-span .pick-sith {
     position: relative;
-    top: 5px;
-    left: 250px;  
+    top: -25px;
+    left: 190px;  
 }
 
 .sith-span .pick-sith p {
     position: relative;
     top: 0px;
-    left: -185px;
+    left: -95px;
   }
 
 .sith-attack {
@@ -72,4 +106,14 @@ div {
 
 .defender {
     margin-left: 150px;
+}
+
+.hero-text {
+    font-size: 26px;
+    color: white;
+}
+
+.sith-text {
+    font-size: 26px;
+    color: white;
 }
